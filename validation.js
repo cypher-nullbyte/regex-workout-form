@@ -3,18 +3,16 @@
 const inputs=document.querySelectorAll('input');
 
 const patterns={
-    telephone:/^\d{11}$/
+    telephone:/^\d{11}$/,
+    username:/^[0-9a-z]{5,12}$/i,
+    password:/^[\da-z@_\-]{8,20}$/i,
+    slug:/^[a-z\d\-]{8,20}$/,
+    email:/^([a-z\d\-\.]+)@([a-z\d\-]+)\.([a-z]{2,8})((\.[a-z]{2,8}){1,2})?$/
 };
 // validation function
 function validate(field,regex){
-    if(regex.test(field.value))
-    {
-        field.clasName='valid';
-    }
-    else
-    {
-        field.clasName="invalid"
-    }
+    field.clasName=regex.test(field.value)?"valid":"invalid";
+    console.log(field.clasName);
 }
 
 inputs.forEach((input)=>{
