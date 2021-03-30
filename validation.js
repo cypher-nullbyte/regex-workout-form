@@ -3,7 +3,7 @@
 const inputs=document.querySelectorAll('input');
 
 const patterns={
-    telephone:/^\d{11}$/,
+    telephone:/^[1-9]\d{9}$/,
     username:/^[0-9a-z]{5,12}$/i,
     password:/^[\da-z@_\-]{8,20}$/i,
     slug:/^[a-z\d\-]{8,20}$/,
@@ -11,8 +11,8 @@ const patterns={
 };
 // validation function
 function validate(field,regex){
-    field.clasName=regex.test(field.value)?"valid":"invalid";
-    console.log(field.clasName);
+    field.className=regex.test(field.value)?"valid":"invalid";
+    // console.log(field.className);
 }
 
 inputs.forEach((input)=>{

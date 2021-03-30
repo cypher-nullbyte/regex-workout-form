@@ -22,3 +22,29 @@ input{
     border: 3px solid #ccc;
     outline: none !important;
 }
+
+/* validation style */
+input.valid{
+    border-color:#36cc36;
+}
+
+input.invalid{
+    border-color:#e43205;
+}
+
+input+p{
+    font-family: arial;
+    font-size: 0.9ems;
+    font-weight: bold;
+    text-align: center;
+    margin:0 10px;
+    color: #e43205;
+    opacity: 0;
+    height: 0;
+}
+
+input.invalid +p{
+    opacity: 1;
+    height: auto;
+    margin-bottom: 20px;
+}
