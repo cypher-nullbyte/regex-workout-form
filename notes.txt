@@ -1,0 +1,4 @@
+
+var reg= /[a-z]/gi;
+//-------Below is another way to do same thing as above
+// var reg=new RegExp(/[a-z]/,'i');  
